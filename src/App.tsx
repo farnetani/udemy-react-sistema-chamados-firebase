@@ -1,4 +1,7 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './routes'
+
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 import usePersistedState from './utils/usePersistedState'
 
@@ -22,6 +25,9 @@ function App() {
       <div className="App">
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
       </div>
     </ThemeProvider>
   )
