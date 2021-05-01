@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.0.0",
+    "firebase": "^8.4.3",
     "polished": "^4.1.1",
     "postcss": "^8.2.9",
     "postcss-custom-properties": "^11.0.0",

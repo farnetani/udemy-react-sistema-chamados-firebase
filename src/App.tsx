@@ -8,6 +8,8 @@ import dark from './styles/themes/dark'
 import GlobalStyle from './styles/global'
 import Header from './components/Header'
 
+import firebase from './services/firebaseConnection'
+
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light)
 
