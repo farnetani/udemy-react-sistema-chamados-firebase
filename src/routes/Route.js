@@ -8,6 +8,7 @@ export default function RouteWrapper({
 }) {
   const loading = false
   const signed = false
+
   if (loading) {
     return <div></div>
   }
