@@ -2,13 +2,14 @@ import React, { useState, useContext } from 'react'
 import { AuthContext } from '../../contexts/auth'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
+import Button from '../../components/Button'
 
 function SignUp() {
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const { signUp } = useContext(AuthContext)
+  const { signUp, loadingAuth } = useContext(AuthContext)
 
   function handleSubmit(e: any) {
     e.preventDefault()
@@ -43,7 +44,9 @@ function SignUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Cadastrar</button>
+          <Button type="submit">
+            {loadingAuth ? 'Carregando...' : 'Cadastrar'}
+          </Button>
         </form>
 
         <Link to="/">Já possuo cadastro</Link>
