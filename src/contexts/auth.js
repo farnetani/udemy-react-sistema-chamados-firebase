@@ -59,6 +59,12 @@ function AuthProvider({ children }) {
     localStorage.setItem('SistemaUser', JSON.stringfy(data))
   }
 
+  async function signOut() {
+    await firebase.auth().signOut()
+    localStorage.removeItem('SistemaUser')
+    setUser(null)
+  }
+
   return (
     // !! : converte para boleano
     <AuthContext.Provider
@@ -66,7 +72,8 @@ function AuthProvider({ children }) {
         signed: !!user,
         user,
         loading,
-        signUp
+        signUp,
+        signOut
       }}
     >
       {children}
