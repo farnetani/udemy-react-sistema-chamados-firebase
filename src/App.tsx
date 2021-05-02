@@ -21,7 +21,7 @@ function App() {
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
   }
-
+  console.log(process.env.REACT_APP_FIREBASE_MEASUREMENT_ID)
   return (
     <ThemeProvider theme={theme}>
       <AuthProvider>
