@@ -8,7 +8,7 @@
 
 .login {
   background: #EAEAEC;
-  width: 600px;
+  width: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +28,8 @@
   }
 
   input {
+    display: flex;
+    align-items: center;
     margin-bottom: 0.5rem;
     height: 35px;
     border: 0;
@@ -35,6 +37,14 @@
     padding: 10px;
     font-size: 1rem;
     background-color: #fff;
+
+    & + input {
+      margin-top: 8px;
+    }
+  }
+
+  input::placeholder {
+    color: #c0c0c0;
   }
 
   button {
@@ -43,13 +53,15 @@
     border-radius: 7px;
     background-color: #181c2e;
     color: #FFFFFF;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   a {
-    margin: 1.5rem 0;
     color: #000000;
     cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding-bottom: 20px;
   }
 
 
@@ -66,4 +78,15 @@
     width: 170px;
     height: 130px;
   }
+}
+
+.login-rodape {
+  display: flex;
+  align-items: flex-end;
+  // flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 25px;
+  margin-bottom: 30px;
+
 }

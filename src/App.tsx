@@ -1,5 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import AuthProvider from './contexts/auth'
+
 import Routes from './routes'
 
 import { ThemeProvider, DefaultTheme } from 'styled-components'
@@ -22,13 +24,15 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <GlobalStyle />
-        <Header toggleTheme={toggleTheme} />
-        <BrowserRouter>
-          <Routes />
-        </BrowserRouter>
-      </div>
+      <AuthProvider>
+        <div className="App">
+          <GlobalStyle />
+          <Header toggleTheme={toggleTheme} />
+          <BrowserRouter>
+            <Routes />
+          </BrowserRouter>
+        </div>
+      </AuthProvider>
     </ThemeProvider>
   )
 }
