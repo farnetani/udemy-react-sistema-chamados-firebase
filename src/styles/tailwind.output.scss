@@ -587,6 +587,15 @@ video {
   height: auto;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
 .table {
   display: table;
 }

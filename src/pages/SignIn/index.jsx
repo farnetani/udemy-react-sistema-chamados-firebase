@@ -57,7 +57,7 @@ function SignIn() {
             placeholder="Senha"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Entrar</button>
+          <Button type="submit">Entrar</Button>
         </form>
         {/* <div className="login-rodape"> */}
         <Footer>
