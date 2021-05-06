@@ -1,7 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { AuthContext } from '../../contexts/auth'
+// import { AuthContext } from '../../contexts/auth'
+import { useAuth } from '../../contexts/auth'
 
 import './signin.scss'
 import logo from '../../assets/logo.png'
@@ -16,7 +17,8 @@ function SignIn() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const { signIn, loadingAuth } = useContext(AuthContext)
+  // const { signIn, loadingAuth } = useContext(AuthContext)
+  const { signIn, loadingAuth } = useAuth()
 
   function handleSubmit(e: any) {
     e.preventDefault()

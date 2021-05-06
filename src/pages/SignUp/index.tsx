@@ -1,5 +1,7 @@
-import React, { useState, useContext } from 'react'
-import { AuthContext } from '../../contexts/auth'
+import React, { useState } from 'react'
+// import { AuthContext } from '../../contexts/auth'
+import { useAuth } from '../../contexts/auth'
+
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import Button from '../../components/Button'
@@ -9,7 +11,8 @@ function SignUp() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const { signUp, loadingAuth } = useContext(AuthContext)
+  // const { signUp, loadingAuth } = useContext(AuthContext)
+  const { signUp, loadingAuth } = useAuth()
 
   function handleSubmit(e: any) {
     e.preventDefault()
