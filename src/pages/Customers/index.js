@@ -39,7 +39,7 @@ export default function Customers() {
   }
 
   return (
-    <div>
+    <>
       <Breadcrump name="Clientes">
         <FiUser size={25} />
       </Breadcrump>
@@ -73,8 +73,30 @@ export default function Customers() {
 
             <button type="submit">Cadastrar</button>
           </form>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <button>teste</button>
         </div>
       </div>
-    </div>
+    </>
   )
 }

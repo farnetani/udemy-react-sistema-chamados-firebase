@@ -12,9 +12,10 @@ export const Container = styled.div`
   padding: 10px 15px;
   background-color: #f8f8f8;
   background-color: #ff9045;
-  min-width: 100vh;
+  width: 100%;
   color: #fff;
   font-weight: 400;
+  margin-top: 60px;
 
   span {
     margin-left: 0.5em;
