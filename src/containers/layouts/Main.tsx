@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import Breadcrump from '../../components/Breadcrump'
-import Sidebar from '../../components/Sidebar'
+import { Container } from './MainStyles'
 
 interface MainProps {
   children: ReactNode
@@ -8,10 +9,11 @@ interface MainProps {
 
 export default function Main({ children }: MainProps) {
   return (
-    <div>
+    <Container>
       <Breadcrump name="Main" />
-      <Sidebar />
+
       {children}
-    </div>
+      <Link to="/admin">Voltar</Link>
+    </Container>
   )
 }

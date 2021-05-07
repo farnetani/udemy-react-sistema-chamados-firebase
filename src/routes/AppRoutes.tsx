@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Dashboard from '../pages/Dashboard'
 
-import Layout from '../pages/Layout'
 import Profile from '../pages/Profile'
 import Customers from '../pages/Customers'
 import SignIn from '../pages/SignIn'
@@ -22,14 +21,13 @@ const AppRoutes: React.FC = () => {
         <Route path="/admin/:path?" exact>
           <MainAdmin>
             <Switch>
-              <Route path="/admin" exact component={Dashboard} />
-              <Route path="/admin/dashboard" component={Dashboard} />
-              <Route path="/admin/profile" component={Profile} />
-              <Route path="/admin/layout" component={Layout} />
-              <Route path="/admin/customers" component={Customers} />
-              <Route path="/admin/config" exact component={Config} />
+              <Route exact path="/admin" component={Dashboard} />
+              <Route exact path="/admin/dashboard" component={Dashboard} />
+              <Route exact path="/admin/profile" component={Profile} />
+              <Route exact path="/admin/customers" component={Customers} />
+              <Route exact path="/admin/config" component={Config} />
               <Route
-                component={() => <div>404 Main Admin</div>}
+                component={() => <h1>Error: 404 Página não encontrada!</h1>}
                 exact
                 path="/admin/*"
               />
@@ -41,8 +39,8 @@ const AppRoutes: React.FC = () => {
           <Main>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/home" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/home" component={Home} />
             </Switch>
           </Main>
         </Route>

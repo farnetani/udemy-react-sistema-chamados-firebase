@@ -40,11 +40,11 @@ export default function Customers() {
 
   return (
     <div>
-      <div className="content">
-        <Breadcrump name="Clientes">
-          <FiUser size={25} />
-        </Breadcrump>
+      <Breadcrump name="Clientes">
+        <FiUser size={25} />
+      </Breadcrump>
 
+      <div className="content">
         <div className="container">
           <form className="form-profile customers" onSubmit={handleAdd}>
             <label>Nome fantasia</label>

@@ -1,6 +1,5 @@
 import { useState, useContext } from 'react'
 import './profile.css'
-import Header from '../../components/Header'
 import Breadcrump from '../../components/Breadcrump'
 import avatar from '../../assets/avatar.png'
 
@@ -98,8 +97,6 @@ export default function Profile() {
 
   return (
     <div>
-      <Header />
-
       <div className="content">
         <Breadcrump name="Meu perfil">
           <FiSettings size={25} />

@@ -22,6 +22,16 @@ export default function Sidebar() {
         />
       </div>
 
+      <Link to="/Home">
+        <FiSettings color="#FFF" size={24} />
+        Home (outro layout)
+      </Link>
+      <Link to="/About">
+        <FiSettings color="#FFF" size={24} />
+        About (outro layout)
+      </Link>
+      <hr />
+
       <Link to="/admin/dashboard">
         <FiHome color="#FFF" size={24} />
         Chamados
@@ -34,13 +44,9 @@ export default function Sidebar() {
         <FiSettings color="#FFF" size={24} />
         Configurações
       </Link>
-      <Link to="/About">
+      <Link to="/admin/Not">
         <FiSettings color="#FFF" size={24} />
-        About
-      </Link>
-      <Link to="/Home">
-        <FiSettings color="#FFF" size={24} />
-        Home
+        Not Found
       </Link>
       <Link to="#" onClick={() => signOut()}>
         <FiSettings color="#FFF" size={24} />
