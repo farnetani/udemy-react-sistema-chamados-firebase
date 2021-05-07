@@ -16,7 +16,7 @@ export interface IUser {
 
 export interface AuthContextData {
   signed: boolean
-  user?: IUser
+  user: IUser | null
   loading: boolean
   signIn: (email: string, password: string) => Promise<void>
   signUp: (email: string, password: string, nome: string) => Promise<void>

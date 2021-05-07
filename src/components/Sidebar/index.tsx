@@ -22,17 +22,25 @@ export default function Sidebar() {
         />
       </div>
 
-      <Link to="/dashboard">
+      <Link to="/admin/dashboard">
         <FiHome color="#FFF" size={24} />
         Chamados
       </Link>
-      <Link to="/customers">
+      <Link to="/admin/customers">
         <FiUser color="#FFF" size={24} />
         Clientes
       </Link>
-      <Link to="/profile">
+      <Link to="/admin/profile">
         <FiSettings color="#FFF" size={24} />
         Configurações
+      </Link>
+      <Link to="/About">
+        <FiSettings color="#FFF" size={24} />
+        About
+      </Link>
+      <Link to="/Home">
+        <FiSettings color="#FFF" size={24} />
+        Home
       </Link>
       <Link to="#" onClick={() => signOut()}>
         <FiSettings color="#FFF" size={24} />
